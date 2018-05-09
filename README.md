@@ -11,3 +11,7 @@ To run the code, you'll need Python 2.7 installed on your system and you must in
 
 How to run code: 
 After executing, enter two integers, each followed by an enter key, to specify points to be used. When you are done adding points, enter anything above the integer 15 to stop entering points and the code will give output information on the CH and show it in a pop-up graph. 
+
+
+
+As for future goals for this project, we'd like to try to get it to work for 100% of cases. Currently, it works for probably 90% of cases that we've thrown at it. There exists an issue with > or >= operators for cases of co-linearity, but we are not sure which one is the best to use. We have seen cases where it works using > and not >=, vice versa. It currently uses >= in the while loop in step 8 of the Graham's Scan algorithm. This way, if you throw a lot of points at it, say 20-25, it might have a single concavity. We are not sure why. We will continue researching and running it until hopefully one day it works for every case we can think of. This project was truly challenging to work on, but it's been worth it. We hope to get it fully working in the near future. 
