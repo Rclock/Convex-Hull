@@ -14,9 +14,15 @@ To install python 2.7 on your system in Ubuntu Linux:
 sudo apt-get install python-matplotlib python-numpy python2.7-dev
 
 You must use the matplotlibcpp.h header file and download it. All of these things accomplished, it should compile and run. 
-Add "-I/usr/include/python2.7 -lpython2.7" to the end of whatever your makefile code is. 
+Add "-I/usr/include/python2.7 -lpython2.7" to the end of whatever your makefile/compile code is. 
 
-How to run code: 
+For example, this is one way to compile the project with debug info:  
+
+g++ -o convex Project3.cpp -std=c++11 -I/usr/include/python2.7 -lpython2.7 -g
+
+
+
+How to run code: ./convex
 After executing, enter two integers, each followed by an enter key, to specify points to be used. When you are done adding points, enter anything above the integer 15 to stop entering points and the code will give output information on the CH and show it in a pop-up graph. 
 
 
