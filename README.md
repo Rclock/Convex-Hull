@@ -3,7 +3,7 @@ A Convex Hull algorithm with visual representation and user-input.
 
 
 
-This code uses c++ in a single main function to take user-input of point coordinates to display a proper Convex Hull graphically. It uses the Graham's Scan method and the cross product method for sorting by polar angle. The code uses Python 2.7 to enable graphing functions within a new namespace in c++. If you do not know what a CH is, here is a brief description: 
+This project will ask for user-input of point coordinates to graphically display a matching Convex Hull. It uses the Graham's Scan method and the cross product method for sorting by polar angle. The code uses Python 2.7 to enable graphing functions within a new namespace in c++. If you do not know what a CH is, here is a brief description: 
 A CH is basically used to find a perimeter of any set of points. It has absolutely no concavities, and is always some type of polygon. There is no restriction on the number of edges, it could just be a simple triangle or it could have 30 edges. CH is widely used in geometric problems and other geometric algorithms today. 
 
 
