@@ -7,14 +7,15 @@ This code uses c++ in a single main function to take user-input of point coordin
 A CH is basically used to find a perimeter of any set of points. It has absolutely no concavities, and is always some type of polygon. There is no restriction on the number of edges, it could just be a simple triangle or it could have 30 edges. CH is widely used in geometric problems and other geometric algorithms today. 
 
 
-To run the code, you'll need Python 2.7 installed on your system and you must modify your makefile. 
+To run the code, you'll need Python 2.7 installed on your system and you will have to include its location when you compile. 
 
 To install python 2.7 on your system in Ubuntu Linux: 
 
 sudo apt-get install python-matplotlib python-numpy python2.7-dev
 
-You must use the matplotlibcpp.h header file and download it. All of these things accomplished, it should compile and run. 
-Add "-I/usr/include/python2.7 -lpython2.7" to the end of whatever your makefile/compile code is. 
+You also have to download the "matplotlib.cpp" file and have it located in the local directory that the project is running in. This is used for the visual plotting. All of these things accomplished, it should compile and run. 
+
+Assuming python2.7 is installed in "/usr/include/", Add "-I/usr/include/python2.7 -lpython2.7" to the end of whatever your makefile/compile code is. 
 
 For example, this is one way to compile the project with debug info:  
 
