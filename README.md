@@ -13,7 +13,7 @@ To install python 2.7 on your system in Ubuntu Linux:
 
 sudo apt-get install python-matplotlib python-numpy python2.7-dev
 
-You also have to download the "matplotlib.cpp" file and have it located in the local directory that the project is running in. This is used for the visual plotting. All of these things accomplished, it should compile and run. 
+You also have to download the "matplotlibcpp.h" file and have it located in the local directory that the project is running in. This is used for the visual plotting. The header file is located above in the files for this repository. the All of these things accomplished, it should compile and run. 
 
 Assuming python2.7 is installed in "/usr/include/", Add "-I/usr/include/python2.7 -lpython2.7" to the end of whatever your makefile/compile code is. 
 
