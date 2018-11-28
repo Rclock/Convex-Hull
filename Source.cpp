@@ -48,7 +48,7 @@ int main()
 {
     vector<point> points; 
     int tempx = 0;
-    while (tempx <= 15)
+    while (tempx <= 15)//while loop to initialize vector with data
     {
         int tempx, tempy = 0;
     cout << "Enter x and y values for a new point, pressing enter after each integer. Enter above 15 to stop. " << endl;
@@ -56,28 +56,25 @@ int main()
     if (tempx > 15)
         break;
     cin >> tempy;
-    points.push_back(point(tempx, tempy));
+    points.push_back(point(tempx, tempy));//adds each point to the vector
     } 
     clear();
     
-//this can hold the points for convex hull
-//  std::vector<point> points = {{{1,3}, {3,3}, {2,5}, {-1,1}, {-1,-3}, {9,4}, {0,-2}, {1,-1}}};
-    
-    
  cout << "\033[1;33m Here are the points given. \033[0m\n" << endl;
  
-  for(point p : points){
+ for(point p : points)//displays each point
+  {
     
     printf("(%d,%d) ", p.x, p.y);
   }
   std::cout << std::endl;
 
-  std::sort(points.begin(), points.end(), [](point u, point v)
+  std::sort(points.begin(), points.end(), [](point u, point v)//uses std::sort to sort the points, based on y coordinate
   {
     return u.y < v.y;
   });
  cout << "\033[1;33m The following points are sorted by y-coordinate to find the origin: \033[0m\n" << endl;
-  for(point p : points){
+ for(point p : points){//displays all of the points now sorted by y-coordinate
    
     printf("(%d,%d) ", p.x, p.y);
   }
@@ -91,7 +88,7 @@ int main()
   //sorts by comparing cross products
   std::sort(points.begin()+1, points.end(), [](point u, point v)
   {
-    //then proceed with the cases here below
+    //before checking for angles, we must subtract the origin's coordinates
     u.x = u.x - origin.x;
     u.y = u.y - origin.y;
     v.x = v.x - origin.x;
@@ -106,11 +103,11 @@ int main()
     if (u.y < 0 && v.y > 0)//
       return false;
     
-    return (u^v) > 0;//this returns true if u is clockwise from v
+    return (u^v) > 0;//this returns true if u is clockwise from v(how we want to sort)
   });
  
    cout << "\033[1;33m The points are now sorted by polar coordinate using cross products: \033[0m\n" << endl;
-  for (point p : points)
+   for (point p : points)//displays points sorted by polar coordinates
   {
    printf("(%d, %d) ", p.x, p.y);
     
@@ -126,7 +123,7 @@ int main()
   //can put the below code either before or after the sort. this checks for the same angle and deletes if so
    
    for (auto i = points.begin(); i <= points.end()-1;)//.begin +1 to make it work
-  {
+     {//for loop deletes all points that are co-linear
    
     
     point p1 = *i;
