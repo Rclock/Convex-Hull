@@ -134,8 +134,7 @@ int main()
    p2.x = p2.x - origin.x;
    p2.y = p2.y - origin.y;
     
-  // origin.x = origin.x - origin.x;
-   //origin.y = origin.y - origin.y;
+
     int temp = origin^(p1);
    
     int temp2 = origin^(p2);
@@ -148,7 +147,6 @@ int main()
   
        if (p3.x >= 0 && p4.x <= 0)
        {
-          // cout << "here" << endl;
            i++;
         continue;
        }
@@ -176,16 +174,12 @@ int main()
      if (d1 > d2)
      {
        cout << "here" << endl;
-      // points.erase(i+1);
        i = points.erase(i+1);
-      //i++;
      }
      if (d2 > d1)
      {
          cout << "here" << endl;
-        // points.erase(i);
       i = points.erase(i);
-    //i++;
      }
      
     }
@@ -239,7 +233,7 @@ for (int i = 0; i < y.size(); i++)
 {
  y[i] = hullpoints[i].y;   
 }
-
+//the following code is used strictly for graphical output
  std::vector<int> x_axis_x(21);
  for(int i=0; i<21; i++){
    x_axis_x.at(i) = i-10;
