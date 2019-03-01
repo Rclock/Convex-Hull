@@ -19,7 +19,7 @@ Assuming python2.7 is installed in "/usr/include/", Add "-I/usr/include/python2.
 
 For example, this is one way to compile the project with debug info:  
 
-g++ -o convex Project3.cpp -std=c++11 -I/usr/include/python2.7 -lpython2.7 -g
+g++ -o convex convexhull.cpp -std=c++11 -I/usr/include/python2.7 -lpython2.7 -g
 
 
 
